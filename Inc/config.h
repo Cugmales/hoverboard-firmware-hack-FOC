@@ -249,7 +249,7 @@
  *
 */
 
-// #define DEBUG_SERIAL_USART2          // left sensor board cable, disable if ADC or PPM is used!
+ #define DEBUG_SERIAL_USART2          // left sensor board cable, disable if ADC or PPM is used!
 // #define DEBUG_SERIAL_USART3          // right sensor board cable, disable if I2C (nunchuk or lcd) is used!
 // #define DEBUG_SERIAL_PROTOCOL        // uncomment this to send user commands to the board, change parameters and print specific signals (see comms.c for the user commands)
 // ########################### END OF DEBUG SERIAL ############################
@@ -297,7 +297,7 @@
     #define AUX_INPUT2          3, -1000, 0, 1000, 0  // TYPE, MIN, MID, MAX, DEADBAND. See INPUT FORMAT section
   #else
     #define FLASH_WRITE_KEY     0x1001    // Flash memory writing key. Change this key to ignore the input calibrations from the flash memory and use the ones in config.h
-    #define DEBUG_SERIAL_USART3           // right sensor board cable, disable if I2C (nunchuk or lcd) is used!
+   // #define DEBUG_SERIAL_USART3           // right sensor board cable, disable if I2C (nunchuk or lcd) is used!
   #endif
 
   // #define TANK_STEERING                   // use for tank steering, each input controls each wheel 
@@ -407,7 +407,7 @@
   #if defined(CONTROL_PPM_RIGHT) && !defined(DUAL_INPUTS)
     #define DEBUG_SERIAL_USART2           // left sensor cable debug
   #elif defined(CONTROL_PPM_LEFT) && !defined(DUAL_INPUTS)
-    #define DEBUG_SERIAL_USART3           // right sensor cable debug
+   // #define DEBUG_SERIAL_USART3           // right sensor cable debug
   #endif
 #endif
 // ############################# END OF VARIANT_PPM SETTINGS ############################
@@ -448,7 +448,7 @@
   #if defined(CONTROL_PWM_RIGHT) && !defined(DUAL_INPUTS)
     #define DEBUG_SERIAL_USART2           // left sensor cable debug
   #elif defined(CONTROL_PWM_LEFT) && !defined(DUAL_INPUTS)
-    #define DEBUG_SERIAL_USART3           // right sensor cable debug
+   // #define DEBUG_SERIAL_USART3           // right sensor cable debug
   #endif
 #endif
 // ############################# END OF VARIANT_PWM SETTINGS ############################
@@ -489,7 +489,7 @@
   #if defined(CONTROL_SERIAL_USART3) && !defined(DUAL_INPUTS)
     #define DEBUG_SERIAL_USART2           // left sensor cable debug
   #elif defined(DEBUG_SERIAL_USART2) && !defined(DUAL_INPUTS)
-    #define DEBUG_SERIAL_USART3           // right sensor cable debug
+   // #define DEBUG_SERIAL_USART3           // right sensor cable debug
   #endif
 #endif
 // ############################# END OF VARIANT_IBUS SETTINGS ############################
@@ -627,7 +627,7 @@
   #ifdef CONTROL_PWM_RIGHT
     #define DEBUG_SERIAL_USART2         // left sensor cable debug
   #else
-    #define DEBUG_SERIAL_USART3         // right sensor cable debug
+  //  #define DEBUG_SERIAL_USART3         // right sensor cable debug
   #endif
 #endif
 // ############################# END OF VARIANT_SKATEBOARD SETTINGS ############################
